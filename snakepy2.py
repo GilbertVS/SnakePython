@@ -227,14 +227,33 @@ def snakePython2() :
             if level > 2 :
                 pygame.draw.rect(finestre, (254, 254, 124), (amplada*0.35, alt, ample, alsada*0.8))
                 if amplada*0.35<=x[0]<=amplada*0.35+ample and alt<=y[0]<alt+alsada*0.8 :
-                    crash = True
+                    serp1 = True
+                    if serp2 == True :
+                        crash = True
+                if amplada*0.35<=x2[0]<=amplada*0.35+ample and alt<=y2[0]<alt+alsada*0.8 :
+                    serp2 = True
+                    if serp1 == True :
+                        crash = True                       
             if level > 3 :
                 pygame.draw.rect(finestre, (254, 254, 124), (amplada*0.175, alsada*0.1, ample, alsada*0.8+alt))
                 if amplada*0.175<=x[0]<=amplada*0.175+ample and alsada*0.1<y[0]<=alsada*0.9+alt :
-                    crash = True
+                    serp1 = True
+                    if serp2 == True :
+                        crash = True
+                if amplada*0.175<=x2[0]<=amplada*0.175+ample and alsada*0.1<y2[0]<=alsada*0.9+alt :
+                    serp2 = True
+                    if serp1 == True :
+                        crash = True
                 pygame.draw.rect(finestre, (254, 254, 124), (amplada*0.525, alsada*0.1, ample, alsada*0.8+alt))
                 if amplada*0.525<=x[0]<=amplada*0.525+ample and alsada*0.1<y[0]<=alsada*0.9+alt :
-                    crash = True
+                    serp1 = True
+                    if serp2 == True :
+                        crash = True
+                if amplada*0.525<=x2[0]<=amplada*0.525+ample and alsada*0.1<y2[0]<=alsada*0.9+alt :
+                    serp2 = True
+                    if serp1 == True :
+                        crash = True
+
             tipografia1 = pygame.font.SysFont("serif", int(alt))
             aleatori = tipografia1.render("{}".format(cont_Ale), 1, (21, 21, 21))
             if cont_Ale < 10 :
